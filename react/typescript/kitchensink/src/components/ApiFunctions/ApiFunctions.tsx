@@ -140,8 +140,8 @@ const ApiFunctions: React.FC<ApiFunctionsProps> = () => {
       console.error(error)
     }
     try {
-      const value = await extensionSDK.userAttributeGetItem('locale')
-      updateMessages(`User attribute 'locale' is ${value}`)
+      const value = await extensionSDK.userAttributeGetItem('client_id')
+      updateMessages(`User attribute 'client_id' is ${value}`)
     } catch (error) {
       updateMessages(error)
       console.error(error)
@@ -166,9 +166,9 @@ const ApiFunctions: React.FC<ApiFunctionsProps> = () => {
     // This will fail because global user attributes cannot by modified by an extension
     try {
       const timestamp = new Date().toString()
-      const value = await extensionSDK.userAttributeSetItem('locale', timestamp)
+      const value = await extensionSDK.userAttributeSetItem('client_id', timestamp)
       if (value) {
-        updateMessages(`Updated 'locale' to '${timestamp}'`)
+        updateMessages(`Updated 'client_id' to '${timestamp}'`)
       }
     } catch (error) {
       updateMessages(error)
@@ -188,8 +188,8 @@ const ApiFunctions: React.FC<ApiFunctionsProps> = () => {
     }
     // This will fail because global user attributes cannot by modified by an extension
     try {
-      await extensionSDK.userAttributeResetItem('locale')
-      updateMessages(`Reset 'locale' default`)
+      await extensionSDK.userAttributeResetItem('client_id')
+      updateMessages(`Reset 'client_id' default`)
     } catch (error) {
       updateMessages(error)
       console.error(error)

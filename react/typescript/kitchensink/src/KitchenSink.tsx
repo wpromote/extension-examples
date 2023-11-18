@@ -115,7 +115,7 @@ export const KitchenSink: React.FC<KitchenSinkProps> = ({
           showExternalApiFunctions: true,
           showMiscFunctions: true,
           dashboardId: 1,
-          exploreId: 'thelook/products',
+          exploreId: 'base/paid_media_integrated',
           lookId: 1,
         }
       )
